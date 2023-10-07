@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: rgb(35, 35, 43);
+}
+
+@layer components {
+  * {
+    @apply font-primary text-white;
+  }
+
+  .action-not-active {
+    @apply relative font-normal cursor-pointer after:transition-all after:duration-300 text-zinc-400 after:absolute after:bottom-0 after:left-0 after:right-full hover:after:right-0 after:border-b-[1px] after:border-neutral-400;
+  }
+
+  .action-active {
+    @apply font-bold cursor-pointer;
+  }
+}
+
